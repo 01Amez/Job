@@ -43,7 +43,7 @@ include_once('inc/header.php');
    </div>
    <br>
    <br>
-   <div class="container" style="background-color:  #5B7DB1;">
+    <div class="container" style="margin-top: 350px; background-color:  #5B7DB1;">
       <section id="post">
          <br>
          <div align=center>
