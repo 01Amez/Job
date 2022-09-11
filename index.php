@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body >
     
     <section class="vh-100">
         <div class="container py-5 h-100">

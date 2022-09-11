@@ -14,12 +14,13 @@ if (isset($_POST["register"])) {
         $subject = "Email for verifiy job";
         $body = "Hi,it is your verify code <   $verification_code   >.";
         $sender = "amezzeroone@gmail.com";
-        if (mail($receiver, $subject, $body, $sender)) {
-            echo "Email sent successfully to $receiver";
-        } else {
-            echo "Sorry, failed while sending mail!";
-        }
 
+       
+      
+      
+       sendE($n,$subject,$body,$receiver,$sender);
+         
+    
 
 
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT);

@@ -3,6 +3,7 @@ session_start();
 include "conn/config.php";
 $email = "";
 $name = "";
+$n='find-job staff';
 $errors = array();
 
 //if user signup button
@@ -29,12 +30,8 @@ if(isset($_POST['signup'])){
         if($data_check){
             $subject = "Email Verification Code";
             $message = "Your verification code is $code";
-            $sender = "From: amezzeroone@gmail.com";
-            if(mail($email, $subject, $message, $sender)){
-                $info = "We've sent a verification code to your email - $email";
-                $_SESSION['info'] = $info;
-                $_SESSION['email'] = $email;
-                $_SESSION['password'] = $password;
+            $sender = "amezzeroone@gmail.com";
+           sendE($n,$subject,$message,$email,$sender);
                 header('location:user-otp.php');
                 exit();
             }else{
@@ -45,7 +42,7 @@ if(isset($_POST['signup'])){
         }
     }
 
-}
+
     //if user click verification code submit button
     if(isset($_POST['check'])){
         $_SESSION['info'] = "";
@@ -114,8 +111,9 @@ if(isset($_POST['signup'])){
             if($run_query){
                 $subject = "Password Reset Code";
                 $message = "Your password reset code is $code";
-                $sender = "From: amezzeroone@gmail.com";
-                if(mail($email, $subject, $message, $sender)){
+                $sender = "amezzeroone@gmail.com";
+                $send=sendE($n,$subject,$message,$email,$sender); ;
+                if($send==1){
                     $info = "We've sent a passwrod reset otp to your email - $email";
                     $_SESSION['info'] = $info;
                     $_SESSION['email'] = $email;
@@ -178,4 +176,3 @@ if(isset($_POST['signup'])){
     if(isset($_POST['login-now'])){
         header('Location:index.php');
     }
-?>

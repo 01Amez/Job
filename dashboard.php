@@ -3,26 +3,15 @@ include_once('inc/header.php');
 if ($_SESSION['email'] == "") {
    header('location:index.php');
 }
-
-include_once('inc/header.php');
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-<table style="margin-top: 20px; margin-bottom: 20px;">
-   <thead>
-      <tr>
-         <th>
-            <h1 style="font-weight: bold">Welcome, <?php echo $_SESSION['email']; ?></h1>
-         </th>
-         <th>
-            <div style="margin-left: 600px">
-               <p><a style="font-size: 20px; font-weight: bold; width: 100px; height: 45px" class="btn btn-danger" href="logout-user.php">Logout</a></p>
-            </div>
-         </th>
-      </tr>
-   </thead>
-   <tbody>
-   </tbody>
-</table>
+<div class="m-5 mx-5  d-flex">
+<h1 class="mr-auto" style="font-weight: bold">Welcome, <?php echo $_SESSION['email']; ?></h1>
+<a class="button btn btn-danger btn-lg ml-auto  "   href="logout-user.php">Logout</a>
+</div>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,12 +27,9 @@ include_once('inc/header.php');
 </head>
 
 <body style="background-color: dark;">
-   <div align=center>
-      <img src="https://www.ladbible.com/cdn-cgi/image/width=720,quality=70,format=webp,fit=pad,dpr=1/https%3A%2F%2Fs3-images.ladbible.com%2Fs3%2Fcontent%2F7c4e92d758d796e33c518e39559463d3.png" alt="">
-   </div>
-   <br>
-   <br>
-   <div class="container" style="background-color:  #5B7DB1;">
+
+   
+   <div class="container " style="background-color:  #5B7DB1;" >
       <section id="post">
          <br>
          <div align=center>
